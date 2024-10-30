@@ -8,12 +8,12 @@
 // coverage:ignore-file
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'package:flutter_real_bloc_with_freezed/application/cart/bloc/cart_bloc.dart'
-    as _i74;
-import 'package:flutter_real_bloc_with_freezed/domain/i_menu_repo.dart'
-    as _i311;
-import 'package:flutter_real_bloc_with_freezed/infrastructure/menu/menu_repository.dart'
-    as _i280;
+import 'package:flutter_real_bloc_with_freezed/application/detail/detail_bloc.dart'
+    as _i480;
+import 'package:flutter_real_bloc_with_freezed/domain/detail/i_detail_repo.dart'
+    as _i462;
+import 'package:flutter_real_bloc_with_freezed/infrastructure/detail/detail_repository.dart'
+    as _i135;
 import 'package:get_it/get_it.dart' as _i174;
 import 'package:injectable/injectable.dart' as _i526;
 
@@ -30,9 +30,9 @@ extension GetItInjectableX on _i174.GetIt {
       environment,
       environmentFilter,
     );
-    gh.lazySingleton<_i311.ImenuRepo>(() => _i280.MenuRepository());
-    gh.factory<_i74.CartBloc>(
-      () => _i74.CartBloc(gh<_i311.ImenuRepo>()),
+    gh.lazySingleton<_i462.IDetailRepo>(() => _i135.DetailRepository());
+    gh.factory<_i480.DetailBloc>(
+      () => _i480.DetailBloc(gh<_i462.IDetailRepo>()),
       registerFor: {_prod},
     );
     return this;
